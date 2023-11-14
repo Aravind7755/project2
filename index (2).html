@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Chalkboard', cursive;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .contact-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    form {
+      background: transparent;
+      padding: 20px;
+      border-radius: 0px;
+      
+      width: 300px;
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      right: -10%;
+      transform: translate(-50%, -50%);
+    }
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .typing-effect {
+        width: min-content;
+      overflow: hidden;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      font-size: 24px;
+      font-style:italic;
+      color: white;
+      position:relative; /* Use relative positioning */
+      top: 50px; /* Adjust the top property to change vertical position */
+      left: 1130px;
+    }
+    .chalk-text {
+      font-size: 36px;
+      width: fit-content;
+      
+      
+      
+      color: white;
+      position:relative; /* Use relative positioning */
+      bottom: -130px; /* Adjust the top property to change vertical position */
+      left: 800px;
+    }
+
+   
+    .colorful-text {
+        top:0;
+        left: 0;
+      font-size: 36px;
+      font-weight: bold;
+      animation: rainbowAnimation 5s linear infinite;
+    }
+
+    @keyframes rainbowAnimation {
+      0% {
+        color: #ff8a00;
+      }
+      16.666% {
+        color: #e52e71;
+      }
+      33.333% {
+        color: #3981f7;
+      }
+      50% {
+        color: #3981f7;
+      }
+      66.666% {
+        color: #e52e71;
+      }
+      83.333% {
+        color: #ff8a00;
+      }
+      100% {
+        color: #ff8a00;
+      }
+    }
+   
+  </style>
+
+</head>
+<body>
+    <div class="typing-effect" id="typingText"></div>
+
+
+  <script>
+    // Text to be typed
+    var textToType = "Lets begin...>";
+
+    // Get the element where typing will occur
+    var typingElement = document.getElementById("typingText");
+
+    // Function to perform the typing animation
+    function typeText() {
+      var i = 0;
+      var typingInterval = setInterval(function() {
+        typingElement.textContent += textToType[i];
+        i++;
+        if (i === textToType.length) {
+          clearInterval(typingInterval);
+        }
+      }, 100); // Adjust the typing speed (milliseconds per character)
+    }
+
+    // Start the typing animation when the page loads
+    window.onload = function() {
+      typeText();
+    };
+  </script>
+  <div class="colorful-text">Learning Managment System</div>
+  <div class="chalk-text">Welocome to LMS</div>
+    <form action="login.php" method="post"> <!-- Replace "login.php" with your server-side script -->
+       
+        
+        <!-- Student Login -->
+        
+        <button type="submit">Student Login</button>
+        
+        <br><br>
+        
+        <!-- Teacher Login -->
+        
+        <button type="submit">Teacher Login</button>
+      </form>
+      
+      <video autoplay muted loop>
+        <source src="VN20231114_094829.mp4" type="video/mp4">
+       
+      </video>
+      
+
+  <footer>
+    
+    <p>Feel free to reach out to us via the following channels:</p>
+    <p>Project p-16</p>
+
+    <div class="contact-icons">
+        
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/your-instagram-profile" target="_blank" rel="noopener noreferrer">
+        <img src="[CITYPNG.COM]White Instagram Logo Scribble Sketch Style Icon - 2000x2000.png" alt="Instagram Icon" width="30" height="30">
+      </a>
+
+      <!-- Facebook Icon -->
+      <a href="https://www.facebook.com/your-facebook-page" target="_blank" rel="noopener noreferrer">
+        <img src="toppng.com-hd-meta-facebook-white-logo-sign-symbol-1207x934.png" alt="Facebook Icon" width="30" height="30">
+      </a>
+
+      <!-- Email Icon -->
+      <a href="mailto:info@example.com">
+        <img src="icons-for-just-about-any-design-466278.png" alt="Email Icon" width="30" height="30">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
